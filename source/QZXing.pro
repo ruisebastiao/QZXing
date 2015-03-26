@@ -2,7 +2,7 @@ QT       += core gui
 
 VERSION = 2.3
 
-greaterThan(QT_VERSION, 4.7): QT += declarative
+#greaterThan(QT_VERSION, 4.7): QT += declarative
 greaterThan(QT_VERSION, 5.0): QT += quick
 
 TARGET = QZXing
