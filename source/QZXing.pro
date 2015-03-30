@@ -256,8 +256,13 @@ unix:!symbian {
         target.path = /usr/lib
     }
 
+
+
     DEFINES += NOFMAXL
     INSTALLS += target
+    header_files.files = QZXing.h QZXing_global.h
+    header_files.path = /usr/include/QZXing
+    INSTALLS += header_files
 }
 
 win32-msvc*{
