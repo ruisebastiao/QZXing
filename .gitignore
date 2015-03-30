@@ -21,3 +21,4 @@ debug/
 *.o
 *.so*
 *moc_*
+*pro.*
