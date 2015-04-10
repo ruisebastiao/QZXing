@@ -22,3 +22,5 @@ debug/
 *.so*
 *moc_*
 *pro.*
+*.res
+*.exp

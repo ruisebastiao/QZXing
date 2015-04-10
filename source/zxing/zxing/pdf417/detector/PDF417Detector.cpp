@@ -21,6 +21,7 @@
 #include <zxing/common/GridSampler.h>
 #include <zxing/common/detector/JavaMath.h>
 #include <zxing/common/detector/MathUtils.h>
+#include <algorithm>
 
 using std::max;
 using std::abs;
