@@ -20,11 +20,7 @@
   *
   * Regarding DecoderFormat, by default all of those are enabled (except DataMatrix will is still not supported)
   */
-class
-#ifndef DISABLE_LIBRARY_FEATURES
-        QZXINGSHARED_EXPORT
-#endif
-        QZXing : public QObject{
+class QZXINGSHARED_EXPORT QZXing : public QObject{
 
     Q_OBJECT
     Q_ENUMS(DecoderFormat)

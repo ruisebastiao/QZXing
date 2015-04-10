@@ -7,7 +7,7 @@ greaterThan(QT_VERSION, 5.0): QT += quick
 
 TARGET = QZXing
 TEMPLATE = lib
-
+CONFIG += plugin
 # CONFIG += staticlib
 
 DEFINES += QZXING_LIBRARY \
@@ -234,35 +234,18 @@ SOURCES += CameraImageWrapper.cpp \
     zxing/bigint/BigIntegerAlgorithms.cc \
     zxing/bigint/BigInteger.cc 
 
-symbian {
-    TARGET.UID3 = 0xE618743C
-    TARGET.EPOCALLOWDLLDATA = 1
-    addFiles.sources = QZXing.dll
-    addFiles.path = !:/sys/bin
-    DEPLOYMENT += addFiles
-#    TARGET.CAPABILITY = All -TCB -AllFiles -DRM
-    TARGET.CAPABILITY += NetworkServices \
-        ReadUserData \
-        WriteUserData \
-        LocalServices \
-        UserEnvironment \
-        Location
-}
 
-unix:!symbian {
-    maemo5 {
-        target.path = /opt/usr/lib
-    } else {
-        target.path = /usr/lib
-    }
+unix:{
 
-
+    target.path = /usr/lib
 
     DEFINES += NOFMAXL
     INSTALLS += target
-    header_files.files = QZXing.h QZXing_global.h
-    header_files.path = /usr/include/QZXing
-    INSTALLS += header_files
+
+
+    #header_files.files = QZXing_global.h QZXing.h
+    #header_files.path = /usr/include/QZXing
+    I#NSTALLS += header_files
 }
 
 win32-msvc*{
@@ -309,3 +292,5 @@ OTHER_FILES += \
     qtc_packaging/debian_fremantle/changelog
 
 
+MOC_DIR = mocs
+OBJECTS_DIR = objs

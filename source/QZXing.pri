@@ -1,11 +1,3 @@
-QT       += core gui
-
-greaterThan(QT_VERSION, 4.7): QT += declarative
-greaterThan(QT_VERSION, 5.0): QT += quick
-
-DEFINES += QZXING_LIBRARY \
-        ZXING_ICONV_CONST \
-        DISABLE_LIBRARY_FEATURES
 		 
 INCLUDEPATH  += $$PWD \
                 $$PWD/zxing
@@ -243,16 +235,16 @@ symbian {
         Location
 }
 
-unix:!symbian {
-    maemo5 {
-        target.path = /opt/usr/lib
-    } else {
-        target.path = /usr/lib
-    }
+#unix:!symbian {
+#    maemo5 {
+#        target.path = /opt/usr/lib
+#    } else {
+#        target.path = /usr/lib
+#    }
 
-    DEFINES += NOFMAXL
-    INSTALLS += target
-}
+#    DEFINES += NOFMAXL
+#   INSTALLS += target
+#}
 
 win32-msvc*{
 
