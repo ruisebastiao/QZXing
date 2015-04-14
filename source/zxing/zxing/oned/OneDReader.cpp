@@ -21,6 +21,7 @@
 #include <zxing/oned/OneDResultPoint.h>
 #include <zxing/NotFoundException.h>
 #include <math.h>
+#include <algorithm>
 #include <limits.h>
 
 using std::vector;

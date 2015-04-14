@@ -21,6 +21,7 @@
 
 #include <zxing/NotFoundException.h>
 #include <zxing/common/detector/MonochromeRectangleDetector.h>
+#include <algorithm>
 #include <sstream>
 
 using std::vector;
