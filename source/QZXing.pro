@@ -7,7 +7,7 @@ greaterThan(QT_VERSION, 5.0): QT += quick
 
 TARGET = QZXing
 TEMPLATE = lib
-CONFIG += plugin
+#CONFIG += plugin
 # CONFIG += staticlib
 
 DEFINES += QZXING_LIBRARY \
